@@ -1,0 +1,28 @@
+ZYNORA VOOR ANDROID - zo krijg je de app op je telefoon
+========================================================
+
+Je hoeft niets te installeren op je pc. GitHub bouwt de app voor je (gratis).
+
+1. Maak een gratis account op github.com en kies "New repository" (naam: zynora, Private mag).
+2. Upload de HELE map zynora (Add file > Upload files). Sleep alle bestanden en mappen erin,
+   ook de verborgen map ".github". Lukt dat niet? Maak dan in GitHub zelf het bestand
+   ".github/workflows/android.yml" aan (Add file > Create new file) en plak de tekst uit
+   dat bestand erin.
+3. Open het tabblad "Actions", kies links "Zynora Android" en klik op "Run workflow".
+4. Na ongeveer 10 minuten is de rij groen. Open de rij en download onderaan bij
+   "Artifacts" het bestand "zynora-apk". Pak het zip-bestand uit.
+5. Zet "app-debug.apk" op je telefoon (kabel, Drive of mail) en open het. Android vraagt
+   om installeren uit onbekende bronnen toe te staan. Daarna staat Zynora op je telefoon.
+
+Muziek van je telefoon: tik in de app op Bibliotheek > "Muziek importeren" en kies je
+nummers. Ze worden in de app bewaard en blijven er na het afsluiten. Muziek opzoeken:
+tik op het vergrootglas in de menubalk.
+
+Zelf bouwen met Android Studio kan ook:
+   cd android-app
+   npm install
+   node prep.js
+   npx cap add android
+   node patch-android.js
+   npx cap sync android
+   npx cap open android     (en bouw daar de apk)

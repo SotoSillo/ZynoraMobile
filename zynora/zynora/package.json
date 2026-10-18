@@ -1,0 +1,47 @@
+{
+  "name": "zynora",
+  "productName": "Zynora",
+  "version": "2.6.1",
+  "description": "Lichtgewicht muziekspeler met synchrone songteksten",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "app.zynora.player",
+    "productName": "Zynora",
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "forceCodeSigning": false
+  },
+  "dependencies": {
+    "music-metadata": "^7.14.0",
+    "adm-zip": "^0.5.16"
+  }
+}

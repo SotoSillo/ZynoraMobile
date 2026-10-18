@@ -1,0 +1,8 @@
+{
+  "appId": "app.zynora.player",
+  "appName": "Zynora",
+  "webDir": "www",
+  "server": { "androidScheme": "http", "cleartext": true },
+  "plugins": { "CapacitorHttp": { "enabled": true } },
+  "android": { "allowMixedContent": true }
+}
